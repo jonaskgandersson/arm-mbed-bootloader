@@ -1,32 +1,88 @@
-# Prerequisites
-*.d
+# From mBed gitignore
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+*.py[cod]
 
-# Precompiled Headers
-*.gch
-*.pch
+# Distribution dir
+dist
 
-# Compiled Dynamic libraries
+# MANIFEST file
+MANIFEST
+doxygen_objdb_*
+
+# Private settings
+mbed_settings.py
+
+# Default Build Directory
+.build/
+BUILD/
+.mbed
+venv/
+
+# Eclipse Project Files
+.cproject
+.project
+.pydevproject
+
+# C extensions
 *.so
-*.dylib
-*.dll
 
-# Fortran module files
-*.mod
-*.smod
+# Packages
+*.egg
+*.egg-info
+dist
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
 
-# Executables
-*.exe
-*.out
-*.app
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+
+output.txt
+uVision Project/
+
+# Sublime Text Project Files
+*.sublime*
+
+*.bak
+debug.log
+
+# Ignore OS X Desktop Services Store files
+.DS_Store
+
+# Orig diff files
+*.orig
+
+# PyCharm
+*.idea
+
+# Cscope
+cscope.*
+
+# vim swap files
+*.swp
+*~
+
+# Visual Studio Code
+.vscode/
+
+# Lib Directory
+mbed-os/
+sd-driver/
+
+# Comment
