@@ -16,5 +16,5 @@
 #define CLEAR_CONSOLE      "\033[2J\033[1;1H"
 
 // Firmeware files
-#define UPDATE_FILE     "/sd/mbed-os-msb-core.bin"
-#define DEFAULT_FILE    "/sd/mbed-os-msb-core-default.bin"
+#define UPDATE_FILE     "/sd/mbed-application.bin"
+#define DEFAULT_FILE    "/sd/mbed-application-default.bin"

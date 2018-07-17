@@ -34,7 +34,7 @@ int main()
 
     FILE *file = fopen(UPDATE_FILE, "rb");
     if (file != NULL) {
-        printf(" |  %-64s| \r\n", "New msb core update found on SD-Card"); 
+        printf(" |  %-64s| \r\n", "New update found on SD-Card"); 
         
         apply_update(file, POST_APPLICATION_ADDR);
 
@@ -46,17 +46,17 @@ int main()
         if( *((int*)POST_APPLICATION_ADDR) == -1 )
         {
             //No application and no new firmware, load default
-            printf(" |  %-64s| \r\n", "Load default msb core"); 
+            printf(" |  %-64s| \r\n", "Load default"); 
             file = fopen(DEFAULT_FILE, "rb");
             if (file != NULL) {
-                printf(" |  %-64s| \r\n", "Default msb core found"); 
+                printf(" |  %-64s| \r\n", "Default found"); 
                 
                 apply_update(file, POST_APPLICATION_ADDR);
 
                 fclose(file);
                 
             } else {
-                printf(" |" ANSI_COLOR_RED "  %-64s" ANSI_COLOR_RESET "| \r\n", "Error no msb core loaded");
+                printf(" |" ANSI_COLOR_RED "  %-64s" ANSI_COLOR_RESET "| \r\n", "Error no FW loaded");
                 printf(" +------------------------------------------------------------------+ \r\n\r\n");  
                 return -1;
             }
@@ -66,7 +66,7 @@ int main()
     fs.unmount();
     sd.deinit();
 
-    printf(" |" ANSI_COLOR_GREEN "  %-64s" ANSI_COLOR_RESET "| \r\n", "Starting msb core"); 
+    printf(" |" ANSI_COLOR_GREEN "  %-64s" ANSI_COLOR_RESET "| \r\n", "Starting application"); 
     printf(" +------------------------------------------------------------------+ \r\n\r\n"); 
    
     //Jump to core start
@@ -119,10 +119,10 @@ void printStart(void)
     printf(CLEAR_CONSOLE);
     printf(FRONT_COLOR_BLACK BACK_COLOR_PEACH );
     printf(" +------------------------------------------------------------------+ \r\n");  
-    printf(" |  %-64s| \r\n", "Microservicebus mBed bootloader version 0.2"); 
+    printf(" |  %-64s| \r\n", "Mbed bootloader version 0.1"); 
     printf(" +------------------------------------------------------------------+ \r\n");    
-    printf(" |  Msb core address: %-46d| \r\n", POST_APPLICATION_ADDR);
-    printf(" |  Msb core size :   %-46d| \r\n", POST_APPLICATION_SIZE);
+    printf(" |  Application address: %-46d| \r\n", POST_APPLICATION_ADDR);
+    printf(" |  Application size :   %-46d| \r\n", POST_APPLICATION_SIZE);
     printf(" +------------------------------------------------------------------+ \r\n");
     printf(ANSI_COLOR_RESET);
 
